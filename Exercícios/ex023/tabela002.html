@@ -13,6 +13,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th{
@@ -20,10 +21,39 @@
             padding: 10px;
         }
 
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot{
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
+
+        thead > tr > th{
+            position: sticky; /*Grudável*/
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(odd){ 
+            background-color: white;
+        }
+
+        tbody >tr:nth-child(even){
+            background-color: lightgray;
+        }
+
+            /* :nth-child = pseudo classe */
+            /* 
+                Pode ser:
+                    2n = De duas em duas coloca uma linha em cinza
+                    odd = ímpar
+                    even = par
+            */
 
         td.num{
             text-align: right;
@@ -37,6 +67,7 @@
     <!--
         Anatomia para tabelas grandes:
         Table
+            CAPTION
             THEAD
                 tr, td, th
             TBODY
@@ -46,10 +77,11 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th> <!-- Título da coluna -->
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -160,10 +192,15 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!-- Título da linha -->
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad amet laudantium dolorem repellendus vitae quos dolore excepturi maxime nam aspernatur explicabo quisquam vero quas, commodi doloremque officiis neque quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sequi nulla, ratione magnam inventore atque non explicabo amet? Distinctio eum dignissimos sed fugit maxime at incidunt reprehenderit temporibus explicabo neque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non animi inventore quae cumque facere beatae pariatur ab illum eum corrupti! Inventore nulla voluptatibus laboriosam ab quasi cum aliquid autem placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempora cum facilis, natus aliquid, magnam debitis, excepturi tempore sed voluptates quaerat sequi ex! Animi reiciendis tempore ipsum architecto rem. Quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad amet laudantium dolorem repellendus vitae quos dolore excepturi maxime nam aspernatur explicabo quisquam vero quas, commodi doloremque officiis neque quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sequi nulla, ratione magnam inventore atque non explicabo amet? Distinctio eum dignissimos sed fugit maxime at incidunt reprehenderit temporibus explicabo neque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non animi inventore quae cumque facere beatae pariatur ab illum eum corrupti! Inventore nulla voluptatibus laboriosam ab quasi cum aliquid autem placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempora cum facilis, natus aliquid, magnam debitis, excepturi tempore sed voluptates quaerat sequi ex! Animi reiciendis tempore ipsum architecto rem. Quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad amet laudantium dolorem repellendus vitae quos dolore excepturi maxime nam aspernatur explicabo quisquam vero quas, commodi doloremque officiis neque quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sequi nulla, ratione magnam inventore atque non explicabo amet? Distinctio eum dignissimos sed fugit maxime at incidunt reprehenderit temporibus explicabo neque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non animi inventore quae cumque facere beatae pariatur ab illum eum corrupti! Inventore nulla voluptatibus laboriosam ab quasi cum aliquid autem placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempora cum facilis, natus aliquid, magnam debitis, excepturi tempore sed voluptates quaerat sequi ex! Animi reiciendis tempore ipsum architecto rem. Quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad amet laudantium dolorem repellendus vitae quos dolore excepturi maxime nam aspernatur explicabo quisquam vero quas, commodi doloremque officiis neque quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sequi nulla, ratione magnam inventore atque non explicabo amet? Distinctio eum dignissimos sed fugit maxime at incidunt reprehenderit temporibus explicabo neque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non animi inventore quae cumque facere beatae pariatur ab illum eum corrupti! Inventore nulla voluptatibus laboriosam ab quasi cum aliquid autem placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempora cum facilis, natus aliquid, magnam debitis, excepturi tempore sed voluptates quaerat sequi ex! Animi reiciendis tempore ipsum architecto rem. Quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad amet laudantium dolorem repellendus vitae quos dolore excepturi maxime nam aspernatur explicabo quisquam vero quas, commodi doloremque officiis neque quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sequi nulla, ratione magnam inventore atque non explicabo amet? Distinctio eum dignissimos sed fugit maxime at incidunt reprehenderit temporibus explicabo neque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non animi inventore quae cumque facere beatae pariatur ab illum eum corrupti! Inventore nulla voluptatibus laboriosam ab quasi cum aliquid autem placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tempora cum facilis, natus aliquid, magnam debitis, excepturi tempore sed voluptates quaerat sequi ex! Animi reiciendis tempore ipsum architecto rem. Quo!</p>
 </body>
 </html>
